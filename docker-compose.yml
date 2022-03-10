@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  test-nhan-api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DJANGO_SECRET_KEY
+      - DJANGO_ALLOWED_HOSTS=localhost,test-nhan-api
+    command: gunicorn config.wsgi -b 0.0.0.0:8080
+  test-nhan-ui:
+    build:
+      context: apps/ui
+    environment:
+      - API_HOST=test-nhan-api:8080
+    ports:
+      - "80:80"
+    depends_on:
+      - test-nhan-api
+    links:
+      - test-nhan-api
