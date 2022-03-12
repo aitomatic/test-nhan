@@ -95,7 +95,7 @@ poetry run pytest
   - `charts/test-nhan-batch-inference/Chart.yaml`
   - `charts/test-nhan-batch-inference/Makefile.yaml`
   - `charts/test-nhan-batch-inference/README.md` (Optional)
-6. Commit the code and push to github
+6. Commit the code and push to github ..
 
 
 
