@@ -90,7 +90,7 @@ poetry run pytest
   jx promote --app test-nhan-batch-inference --version $VERSION -b --all --timeout 1h
   ```
 
-4. Copy `charts/test-nhan-batch-process` folder into `charts/test-nhan-batch-inference`.
+4. Copy `charts/test-nhan-batch-process` folder into `charts/test-nhan-batch-inference`..
 5. Update the following files, replace `batch_process` by `batch-inference` and `batch-inference` by `batch-etl`:
   - `charts/test-nhan-batch-inference/Chart.yaml`
   - `charts/test-nhan-batch-inference/Makefile.yaml`
